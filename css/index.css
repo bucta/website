@@ -1,6 +1,8 @@
 :root {
   --white: #fafafa;
   --main-text-color: #223a5e;
+  --gradient-color-1: #6500e6;
+  --gradient-color-2: #1b9898;
 }
 
 * {
@@ -11,7 +13,7 @@
 /* Header Styles */
 header {
   padding: 10px;
-  background: linear-gradient(-5deg, #6500e6 -50%, #1b9898 100%);
+  background: linear-gradient(-5deg, var(--gradient-color-1)  -50%, var(--gradient-color-2) 100%);
   color: var(--white);
   width: 100%;
   position: sticky;
@@ -63,7 +65,7 @@ main {
 
 /* Footer Style */
 footer {
-  background: linear-gradient(175deg, #6500e6 -50%, #1b9898 100%);
+  background: linear-gradient(175deg, var(--gradient-color-1) -50%, var(--gradient-color-2) 100%);
   padding: 10px;
   color: var(--white);
   padding-bottom: 50px;
@@ -138,4 +140,37 @@ img {
   width: 250px;
   height: 250px;
   object-fit: contain;
+}
+
+.members-cards-container > div {
+  height: 410px;
+}
+
+.members-cards-container > div > img {
+  object-fit: cover;
+}
+
+/* SCROLL TO TOP */
+#scrollToTopBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: #463ec6; /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+}
+
+#scrollToTopBtn:hover {
+  background-color: var(--main-text-color); /* Add a dark-grey background on hover */
+}
+
+.stt-arrow {
+  font-size: 20px;
 }
